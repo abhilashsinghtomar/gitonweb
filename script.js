@@ -141,6 +141,20 @@ const createMobileMenu = () => {
         navLinks.classList.toggle('show');
     });
 };
+const skills = [
+    "Data Analyst",
+    "AI Engineer",
+    "DevOps Engineer",
+    "Cloud Engineer"
+];
+
+let index = 0;
+const skillElement = document.querySelector(".skills");
+
+setInterval(() => {
+    index = (index + 1) % skills.length;
+    skillElement.textContent = skills[index];
+}, 2000);
 
 // Initialize mobile menu if screen width is small
 if (window.innerWidth <= 768) {
